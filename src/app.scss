@@ -20,11 +20,11 @@ body {
 			display: -webkit-flex;
 			display: flex;
 			-webkit-flex-wrap: wrap;
-	    	flex-wrap: wrap;
-	    	-webkit-justify-content: space-between;
-	    	justify-content: space-between;
-	    	width: 1200px;
-	    	margin: 0 auto;
+			flex-wrap: wrap;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+			width: 1200px;
+			margin: 0 auto;
 
 			.repo {
 				background-color: white;

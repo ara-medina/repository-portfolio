@@ -8,29 +8,29 @@ export function RepositoryGenerator() {
 	self.getRepos = () => {
 		return new Promise((resolve,reject) => {
 			let xhr = new XMLHttpRequest();
-			xhr.open("GET", "https://api.github.com/users/sandramedina/repos", false);
+			xhr.open('GET', 'https://api.github.com/users/sandramedina/repos', false);
 			xhr.onload = function () {
 				if (this.status >= 200 && this.status < 300) {
-        			resolve(xhr.response); 
+					resolve(xhr.response); 
 				} else {
 					reject({
 						status: this.status,
 						statusText: xhr.statusText
 					});
 				}
-			};
+			}
 			xhr.onerror = function () {
 				reject({
 				status: this.status,
 				statusText: xhr.statusText
 				});
-		    };
+			}
 			xhr.send();
 
 			repos = JSON.parse(xhr.responseText);
 
 			self.convertToHTML();
-		});
+		})
 	}
 
 	// Create a string of html for each repo, concatenate, then set it to the inner html of the container
@@ -51,7 +51,7 @@ export function RepositoryGenerator() {
 			html = html + htmlSnippet
 		}
 
-		document.getElementById("repos").innerHTML = html;
+		document.getElementById('repos').innerHTML = html;
 	}
 
 	// Get the value by which to filter the repos from the dropdown
@@ -75,9 +75,9 @@ export function RepositoryGenerator() {
 			return function (a,b) {
 				let aProperty = a[property].toLowerCase(),
 					bProperty = b[property].toLowerCase();
-	        	let result = (aProperty < bProperty) ? -1 : (aProperty > bProperty) ? 1 : 0;
-	        	return result;
-	    	}
+				let result = (aProperty < bProperty) ? -1 : (aProperty > bProperty) ? 1 : 0;
+				return result;
+			}
 		}
 	}
 
