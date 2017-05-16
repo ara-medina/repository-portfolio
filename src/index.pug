@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    title= repoProject
+  body
+    h1 Sandra Medina // Repositories
+    select#selectFilter
+      option(value='name' selected='selected') Name
+      option(value='pushed_at') Date
+      option(value='description') Description
+
+    #container
+      #repos
+        include includes/repo.pug
