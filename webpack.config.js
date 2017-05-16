@@ -36,17 +36,17 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-	      title: 'Repository Project',
-	      template: './src/index.pug',
-	      minify: {
-	      	collapseWhitespace: true
-	      },
-	      hash: true,
-	    }),
-	    new ExtractTextPlugin({
-	    	filename: 'app.css',
-	    	disabled: false,
-	    	allChunks: true
-	    })
-    ]
+			title: 'Repository Project',
+			template: './src/index.pug',
+			minify: {
+				collapseWhitespace: true
+			},
+			hash: true,
+		}),
+		new ExtractTextPlugin({
+			filename: 'app.css',
+			disabled: false,
+			allChunks: true
+		})
+	]
 }
