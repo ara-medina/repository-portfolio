@@ -4,7 +4,7 @@
   "description": "repository-portfolio",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d",
+    "dev": "webpack-dev-server",
     "prod": "webpack -p"
   },
   "repository": {
