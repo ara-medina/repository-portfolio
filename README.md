@@ -1,5 +1,5 @@
 # repository-portfolio
-A portfolio of GitHub repos created by Sandra Medina.
+A portfolio of GitHub repos.
 
 Install:
 1. Clone repo
